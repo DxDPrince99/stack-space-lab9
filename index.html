@@ -11,22 +11,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<input type="checkbox" id="theme" class="sr-only" aria-label="Switch dark cyberpunk theme">
 
 <header class="site-header" id="top">
   <nav class="nav" aria-label="Main navigation">
     <a class="brand" href="#top" aria-label="STACK SPACE home">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="3" width="22" height="7" rx="3" fill="currentColor"/><rect x="3" y="12" width="22" height="7" rx="3" fill="currentColor" opacity=".65"/><rect x="3" y="21" width="22" height="4" rx="2" fill="currentColor" opacity=".35"/></svg>
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 25 9 14 15 3 9Z" fill="none" stroke="#5b3bdb" stroke-width="2.2" stroke-linejoin="round"/><path d="M3 14l11 6 11-6M3 19l11 6 11-6" fill="none" stroke="#5b3bdb" stroke-width="2.2" stroke-linejoin="round"/></svg>
       STACK SPACE
     </a>
     <input type="checkbox" id="menu-toggle" class="sr-only" aria-label="Toggle menu">
+    <label for="theme" class="theme-btn"><span class="txt"><span class="when-light">Dark / Cyberpunk</span><span class="when-dark">Light / Daylight</span></span><span aria-hidden="true">◐</span></label>
     <label for="menu-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
     <ul class="nav-links">
       <li><a href="#tariffs">Tariffs</a></li>
       <li><a href="#location">Location</a></li>
       <li><a href="#amenities">Amenities</a></li>
       <li><a href="#events">Events</a></li>
-      <li><a class="btn btn-primary" href="#booking">Test Day</a></li>
     </ul>
+    <a class="btn btn-primary test-day" href="#booking">Test Day ↗</a>
   </nav>
 </header>
 
@@ -36,94 +38,75 @@
       <p class="eyebrow">Built for builders / Open 24/7</p>
       <h1 id="hero-title">Space for Productive Work 24/7</h1>
       <p class="lead">Your next big idea needs the right space. Work, meet and build with an IT community.</p>
-      <a class="btn btn-primary btn-lg" href="#location">Choose your location</a>
-      <ul class="chips">
-        <li>Flexible plans</li>
-        <li>Fast Wi-Fi</li>
-        <li>Great coffee</li>
-      </ul>
+      <a class="btn btn-primary btn-lg" href="#location">Choose your location ↗</a>
+      <ul class="dots"><li>Flexible plans</li><li>Fast Wi-Fi</li><li>Great coffee</li></ul>
     </article>
+    <figure class="hero-img">
+      <img src="images/hero.webp" alt="Interior of the coworking working area with desks and large windows" width="1264" height="848">
+    </figure>
   </section>
 
-  <section class="section" id="amenities" aria-labelledby="amen-title">
+  <section class="amenities" id="amenities" aria-labelledby="amen-title">
     <h2 id="amen-title">Everything you need. Already here.</h2>
-    <ul class="grid grid-4">
-      <li class="card tone-mint"><article><p class="eyebrow">01 / Connect</p><h3>Fast Wi-Fi &amp; wired internet</h3></article></li>
-      <li class="card tone-peach"><article><p class="eyebrow">02 / Focus</p><h3>Quiet zones &amp; call booths</h3></article></li>
-      <li class="card tone-lilac"><article><p class="eyebrow">03 / Recharge</p><h3>Coffee, kitchen &amp; lounge</h3></article></li>
-      <li class="card tone-sky"><article><p class="eyebrow">04 / Belong</p><h3>Meetups &amp; a builder community</h3></article></li>
+    <ul class="amen-list">
+      <li><p class="eyebrow">01 / Connect</p><p>Fast Wi-Fi &amp; wired internet</p></li>
+      <li><p class="eyebrow">02 / Focus</p><p>Quiet zones &amp; call booths</p></li>
+      <li><p class="eyebrow">03 / Recharge</p><p>Coffee, kitchen &amp; lounge</p></li>
+      <li><p class="eyebrow">04 / Belong</p><p>Meetups &amp; a builder community</p></li>
     </ul>
   </section>
 
-  <section class="section" id="tariffs" aria-labelledby="tar-title">
+  <section class="tariffs" id="tariffs" aria-labelledby="tar-title">
     <p class="eyebrow">Your space. Your pace.</p>
     <h2 id="tar-title">Find your work mode.</h2>
-    <p class="muted">From a solo sprint to your team's next chapter.</p>
-    <ul class="grid grid-3">
-      <li class="card tone-mint">
+    <p class="muted">From a solo sprint to your team’s next chapter.</p>
+    <ul class="plans">
+      <li class="plan plan-hot">
         <article>
-          <h3>Hot Desk</h3>
-          <p class="price">5,000 <small>₸ / day</small></p>
-          <ul class="features">
-            <li>Any available desk</li>
-            <li>High-speed Wi-Fi</li>
-            <li>Coffee &amp; lounge access</li>
-            <li>Community events</li>
-          </ul>
-          <p class="note">Perfect for a flexible day</p>
-          <a class="btn btn-dark" href="#booking">Choose Hot Desk</a>
+          <header class="plan-head"><h3>Hot Desk</h3><p class="price">5,000₸/day</p></header>
+          <p class="plan-name">Hot Desk</p>
+          <ul class="features"><li>Any available desk</li><li>High-speed Wi-Fi</li><li>Coffee &amp; lounge access</li><li>Community events</li><li>Perfect for a flexible day</li></ul>
+          <a class="btn btn-outline" href="#booking">Choose Hot Desk</a>
         </article>
       </li>
-      <li class="card tone-peach">
+      <li class="plan plan-fixed">
         <article>
-          <h3>Fixed Desk</h3>
-          <p class="price">85,000 <small>₸ / month</small></p>
-          <ul class="features">
-            <li>Your own dedicated desk</li>
-            <li>24/7 resident access</li>
-            <li>Personal storage locker</li>
-            <li>4 meeting-room hours</li>
-          </ul>
-          <p class="note">Your daily focus zone</p>
-          <a class="btn btn-primary" href="#booking">Choose Fixed Desk</a>
+          <header class="plan-head"><h3>Fixed Desk</h3><p class="price">85,000₸/month</p></header>
+          <p class="plan-name">Fixed Desk</p>
+          <ul class="features"><li>Your own dedicated desk</li><li>24/7 resident access</li><li>Personal storage locker</li><li>4 meeting-room hours</li><li>Your daily focus zone</li></ul>
+          <a class="btn btn-solid" href="#booking">Choose Fixed Desk</a>
         </article>
       </li>
-      <li class="card tone-lilac">
+      <li class="plan plan-team">
         <article>
-          <h3>Team Office</h3>
-          <p class="price">320,000 <small>₸ / month</small></p>
-          <ul class="features">
-            <li>Private office for 4 people</li>
-            <li>24/7 access for your team</li>
-            <li>12 meeting-room hours</li>
-            <li>Business address option</li>
-          </ul>
-          <p class="note">A space to grow together</p>
-          <a class="btn btn-dark" href="#booking">Explore Team Office</a>
+          <header class="plan-head"><h3>Team Office</h3><p class="price">320,000₸/month</p></header>
+          <p class="plan-name">Team Office</p>
+          <ul class="features"><li>Private office for 4 people</li><li>24/7 access for your team</li><li>12 meeting-room hours</li><li>Business address option</li><li>A space to grow together</li></ul>
+          <a class="btn btn-outline" href="#booking">Explore Team Office</a>
         </article>
       </li>
     </ul>
     <p class="muted small">Illustrative prices for this student project. No payment is collected.</p>
   </section>
 
-  <section class="section band" id="events" aria-labelledby="ev-title">
+  <section class="events" id="events" aria-labelledby="ev-title">
     <p class="eyebrow">More than a desk</p>
     <h2 id="ev-title">Meet your next collaborator.</h2>
-    <p class="lead">Demo community programme: Friday Demo Night, design critiques and developer meetups. Bring your laptop. Leave with a new idea.</p>
+    <p>Demo community programme: Friday Demo Night, design critiques and developer meetups. Bring your laptop. Leave with a new idea.</p>
   </section>
 
-  <section class="section booking" id="booking" aria-labelledby="book-title">
+  <section class="booking" id="booking" aria-labelledby="book-title">
     <article class="booking-intro">
       <p class="eyebrow">Make room for good ideas</p>
       <h2 id="book-title">Your next meeting, sorted.</h2>
-      <p class="lead">Choose a zone and time. Leave your details so the community team can confirm your request.</p>
-      <ul class="chips"><li>Meeting rooms</li><li>Team sessions</li><li>Quiet calls</li></ul>
+      <p class="muted lead">Choose a zone and time. Leave your details so the community team can confirm your request.</p>
+      <ul class="dots accent"><li>Meeting rooms</li><li>Team sessions</li><li>Quiet calls</li></ul>
     </article>
 
     <form class="form" action="#" method="get">
       <label for="zone">Zone selection *
         <select id="zone" name="zone" required>
-          <option value="" selected disabled>Choose a zone</option>
+          <option value="" selected disabled>Meeting Room 01</option>
           <option>Meeting Room 01</option>
           <option>Meeting Room 02</option>
           <option>Call Booth</option>
@@ -135,7 +118,7 @@
       </label>
       <label for="time">Time interval *
         <select id="time" name="time" required>
-          <option value="" selected disabled>Choose time</option>
+          <option value="" selected disabled>10:00 – 11:00</option>
           <option>10:00 – 11:00</option>
           <option>11:00 – 12:00</option>
           <option>14:00 – 15:00</option>
@@ -143,61 +126,54 @@
         </select>
       </label>
       <label for="phone">Contact phone *
-        <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___ __ __" pattern="[+0-9()\s\-]{10,18}" required>
+        <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___ __ __" pattern="[+0-9()\s\-_]{10,22}" required>
       </label>
       <label for="email">Email *
         <input id="email" name="email" type="email" placeholder="you@example.com" required>
       </label>
-      <button class="btn btn-primary btn-lg" type="submit">Request a reservation</button>
+      <button class="btn btn-primary btn-lg" type="submit">Request a reservation ↗</button>
       <p class="muted small">* Required fields. A request is confirmed only after a reply from the team.</p>
     </form>
   </section>
 </main>
 
 <footer class="footer" id="location">
-  <section class="footer-grid" aria-label="Location and information">
-    <article class="map-card">
-      <p class="eyebrow">Visit us</p>
-      <h2>Find your place.</h2>
-      <svg class="map" viewBox="0 0 320 180" role="img" aria-label="Illustrative map of the coworking location">
-        <rect width="320" height="180" rx="18" class="map-bg"/>
-        <path d="M0 120 H320 M0 60 H320 M80 0 V180 M200 0 V180" class="map-line"/>
-        <path d="M20 160 L120 120 L200 60 L300 20" class="map-route"/>
-        <circle cx="200" cy="60" r="16" class="map-pin"/><circle cx="200" cy="60" r="6" class="map-dot"/>
+  <section class="place" aria-label="Location">
+    <figure class="map-fig">
+      <svg class="map" viewBox="0 0 520 240" role="img" aria-label="Illustrative map of the coworking location">
+        <rect width="520" height="240" rx="22" fill="#ece8fb"/>
+        <path d="M0 48 L400 -10 L520 -10 L520 10 L60 90Z" fill="#d9d0f5" opacity=".0"/>
+        <path d="M-10 250 L520 20" stroke="#d9d0f5" stroke-width="22" fill="none" stroke-linecap="round"/>
+        <rect x="150" y="0" width="14" height="240" fill="#fff"/><rect x="418" y="0" width="14" height="240" fill="#fff"/>
+        <rect x="0" y="52" width="520" height="12" fill="#fff"/><rect x="0" y="198" width="520" height="12" fill="#fff"/>
+        <rect x="215" y="98" width="140" height="62" rx="14" fill="#cfe9d3"/>
+        <path d="M290 62c-26 0-44 18-44 42 0 28 44 70 44 70s44-42 44-70c0-24-18-42-44-42Z" fill="#5b3bdb"/>
+        <circle cx="290" cy="104" r="16" fill="#fff"/>
       </svg>
-      <p><strong>Almaty / Concept location</strong></p>
-      <p class="muted">Open 24 hours, seven days a week.</p>
-      <p><a href="mailto:hello@stackspace.example">hello@stackspace.example</a></p>
+    </figure>
+    <article class="place-info">
+      <h2>Find your place.</h2>
+      <p class="muted">Almaty / Concept location<br>Open 24 hours, seven days a week.</p>
+      <p><a class="mail" href="mailto:hello@stackspace.example">hello@stackspace.example</a></p>
       <p class="muted small">Map is illustrative. Address and contact details are demonstration content.</p>
     </article>
-
-    <article>
+    <article class="regs">
       <h3>Resident regulations</h3>
       <p class="muted">Respect quiet zones. Book meeting rooms in advance. Keep shared areas clean. Guests check in with the community team.</p>
     </article>
-
-    <nav aria-label="Footer navigation">
-      <h3>Navigate</h3>
-      <ul class="footer-links">
-        <li><a href="#tariffs">Tariffs</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#amenities">Amenities</a></li>
-        <li><a href="#events">Events</a></li>
-      </ul>
-    </nav>
-
-    <article class="theme-box">
-      <h3>Theme</h3>
-      <label class="switch" for="theme">
-        <input type="checkbox" id="theme" class="sr-only">
-        <span class="track"><span class="thumb"></span></span>
-        <span class="switch-text"><span class="when-light">Light / Daylight</span><span class="when-dark">Dark / Cyberpunk</span></span>
-      </label>
-    </article>
   </section>
 
-  <p class="legal">© 2026 STACK SPACE | Academic concept / ICT6001 | Privacy: demo only; no personal data is stored by this mockup.</p>
+  <section class="foot-row" aria-label="Footer links">
+    <a class="brand" href="#top">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 25 9 14 15 3 9Z" fill="none" stroke="#5b3bdb" stroke-width="2.2" stroke-linejoin="round"/><path d="M3 14l11 6 11-6M3 19l11 6 11-6" fill="none" stroke="#5b3bdb" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      STACK SPACE
+    </a>
+    <nav aria-label="Footer navigation">
+      <ul class="foot-links"><li><a href="#tariffs">Tariffs</a></li><li><a href="#location">Location</a></li><li><a href="#amenities">Amenities</a></li><li><a href="#events">Events</a></li></ul>
+    </nav>
+    <label for="theme" class="theme-btn footer-theme"><span class="txt"><span class="when-light">Dark / Cyberpunk</span><span class="when-dark">Light / Daylight</span></span><span aria-hidden="true">◐</span></label>
+  </section>
+  <p class="legal">© 2026 STACK SPACE · Academic concept / ICT6001<br>Privacy: demo only; no personal data is stored by this mockup.</p>
 </footer>
-
 </body>
 </html>
